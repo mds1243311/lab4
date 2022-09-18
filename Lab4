@@ -1,0 +1,32 @@
+public class Lab4 {
+    /**
+     * @param matrix
+     * @param target
+     * @return true or false depending on whether the matrix contains the target
+     */
+    public static boolean searchMatrix(int[][] matrix, int target) {
+        for(int i = 0; i < matrix.length; i++) {
+            for(int j = 0; j < matrix[0].length; j++) {
+                if(matrix[i][j]==target) {
+                    return true;
+                }
+            }
+        }
+        return false;
+    }
+
+    public static void main(String[] args) {
+        int[][] example1 = new int[][]{new int[]{1,2,3,4},
+                new int[]{5,6,7,8},
+                new int[]{9,10,11,12}};
+        int[][] example2 = new int[][]{new int[]{1,4,6,8},
+                new int[]{11,22,33,44},
+                new int[]{78,79,91,99}};
+        System.out.println(searchMatrix(example1, 3));
+        //expected: true
+        System.out.println(searchMatrix(example1, 15));
+        //expected: false
+        System.out.println(searchMatrix(example2, 33));
+        //expected: true
+    }
+}
