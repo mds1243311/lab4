@@ -1,17 +1,20 @@
 public class Lab4 {
     /**
-     * @param matrix
-     * @param target
+     * @param matrix the double matrix of ints
+     * @param target the target int being looked for
      * @return true or false depending on whether the matrix contains the target
      */
     public static boolean searchMatrix(int[][] matrix, int target) {
+        // double for loop to search for the target
         for(int i = 0; i < matrix.length; i++) {
             for(int j = 0; j < matrix[0].length; j++) {
                 if(matrix[i][j]==target) {
+                    // found target
                     return true;
                 }
             }
         }
+        // not found
         return false;
     }
 
